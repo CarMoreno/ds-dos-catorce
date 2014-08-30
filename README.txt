@@ -1,1 +1,3 @@
 Primer commit
+
+Singleton
