@@ -1,0 +1,23 @@
+.mypanel{
+	background-color: #5996BC;
+}
+.mypanel h2{
+	font-family: 'Kaushan Script', cursive;
+	color: #3333AD;
+}
+.final{
+	border: solid 5px;
+	border-radius: 3px; 
+	border-color: #F280AE;
+	margin-top: 80px;
+	background-color: #E6005C;
+	margin:40px auto 80px;
+	width: 520px;
+}
+.final h2{
+	font-family: 'Indie Flower', cursive;
+	color: #F280AE;
+	padding: 5px;
+	text-align: center;
+
+}

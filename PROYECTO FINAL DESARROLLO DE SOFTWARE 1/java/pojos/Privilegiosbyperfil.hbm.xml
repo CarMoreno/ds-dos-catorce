@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="pojos.Privilegiosbyperfil" table="privilegiosbyperfil" schema="public" optimistic-lock="version">
+        <id name="idPrivilegiosperfil" type="int">
+            <column name="id_privilegiosperfil" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="perfil" class="pojos.Perfil" fetch="select">
+            <column name="perfil" not-null="true" />
+        </many-to-one>
+        <many-to-one name="privilegios" class="pojos.Privilegios" fetch="select">
+            <column name="privilegios" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

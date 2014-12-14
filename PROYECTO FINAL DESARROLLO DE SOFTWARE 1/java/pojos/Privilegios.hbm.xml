@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="pojos.Privilegios" table="privilegios" schema="public" optimistic-lock="version">
+        <id name="idPrivilegio" type="int">
+            <column name="id_privilegio" />
+            <generator class="identity" /><!-- Se genera el identificador de forma autoincremental-->
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="60" not-null="true" />
+        </property>
+        <set name="privilegiosbyperfils" table="privilegiosbyperfil" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="privilegios" not-null="true" />
+            </key>
+            <one-to-many class="pojos.Privilegiosbyperfil" />
+        </set>
+    </class>
+</hibernate-mapping>
